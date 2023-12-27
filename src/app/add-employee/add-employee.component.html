@@ -1,0 +1,38 @@
+<!-- src/app/add-employee/add-employee.component.html -->
+
+<div class="container mt-4">
+    <div class="card">
+      <div class="card-header bg-primary text-white">
+        <h2 class="text-center">Add Employee</h2>
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <label for="employeeId">Employee ID:</label>
+            <input type="text" class="form-control" id="employeeId" [(ngModel)]="newEmployee.id" name="employeeId" placeholder="Employee ID" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="firstName">First Name:</label>
+            <input [(ngModel)]="newEmployee.first_name" name="first_name" type="text" class="form-control" placeholder="First Name" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="lastName">Last Name:</label>
+            <input [(ngModel)]="newEmployee.last_name" name="last_name" type="text" class="form-control" placeholder="Last Name" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" [(ngModel)]="newEmployee.email" name="email" placeholder="Email" required>
+          </div>
+  
+          <div class="text-center">
+            <button class="btn btn-primary" (click)="saveEmployee()">Save Employee</button>
+            <button class="btn btn-secondary" (click)="goBack()">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
